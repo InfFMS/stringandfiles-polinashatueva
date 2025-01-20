@@ -3,3 +3,17 @@
 # Слова во всех предложениях должны быть приведены к верхнему регистру.
 # Между словами вместо пробела ставится символ "_".
 # После записи откройте этот файл, считайте содержимое и выведите его на экран.
+a = int(input())
+c = []
+for i in range(a):
+    b = input()
+    c.append(b)
+print(c)
+with open('task4.txt',"w", encoding="utf-8") as f:
+    for b in c:
+        w = b.capitalize()
+        w.replace(" ","_")
+        f.write(w + "\n")
+with open('task4.txt',"r", encoding="utf-8") as ft:
+    r= ft.read()
+    print(r)
